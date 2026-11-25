@@ -1,0 +1,10 @@
+{
+  "name": "svv-vm",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  // Photos are kept in KV until an R2 bucket exists. To switch later, create the bucket and add:
+  // "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "svv-vm-photos" }],
+  "kv_namespaces": [{ "binding": "CACHE", "id": "d2a0214bf183436bb3d2db9c4f687cc7" }],
+  "vars": { "CLIENT_NAME": "Suba Sri Valli Vilas", "ALLOWED_ORIGIN": "" }
+}
